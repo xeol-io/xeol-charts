@@ -32,9 +32,9 @@ data:
     ignore-not-running: {{ .Values.xeolAgent.ignoreNotRunning }}
     missing-tag-policy:
       {{- toYaml .Values.xeolAgent.missingTagPolicy | nindent 6 }}
-    anchore:
-      url: {{ .Values.xeolAgent.anchore.url }}
+    xeol:
+      url: {{ .Values.xeolAgent.xeol.url }}
       apiKey: $XEOL_AGENT_API_KEY
       http:
-        insecure: {{ .Values.xeolAgent.anchore.http.insecure }}
-        timeout-seconds: {{ .Values.xeolAgent.anchore.http.timeoutSeconds }}
+        insecure: {{ .Values.xeolAgent.xeol.http.insecure }}
+        timeout-seconds: {{ .Values.xeolAgent.xeol.http.timeoutSeconds }}

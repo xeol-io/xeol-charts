@@ -25,7 +25,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "anchore-kai"
+  name: "xeol-agent"
 
 podAnnotations: {}
 
@@ -94,7 +94,7 @@ xeolAgent:
     # location to write the log file (default is not to have a log file)
     file: ""
 
-  # Path should not be changed, cluster value is used to tell Anchore which cluster this inventory is coming from
+  # Path should not be changed, cluster value is used to tell xeol.io which cluster this inventory is coming from
   kubeconfig:
     path: use-in-cluster
     cluster: docker-desktop
