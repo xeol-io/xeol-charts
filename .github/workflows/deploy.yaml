@@ -7,6 +7,9 @@ on:
 
 jobs:
   release:
+    permissions:
+      contents: write
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,5 +31,5 @@ jobs:
           charts_dir: stable
           charts_repo_url: https://charts.xeol.io
         env:
-          CR_TOKEN: "${{ secrets.NOQCKS_GITHUB_TOKEN }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
