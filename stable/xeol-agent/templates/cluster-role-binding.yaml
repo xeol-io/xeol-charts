@@ -4,7 +4,7 @@ metadata:
   name: xeol-agent-read-only-binding
 subjects:
   - kind: ServiceAccount
-    name: {{ include "xeolAgent.serviceAccountName" . }}
+    name: {{ include "xeol-agent.serviceAccountName" . }}
     namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
