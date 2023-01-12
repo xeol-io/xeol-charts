@@ -60,7 +60,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - name: config-volume
-              mountPath: /etc/xdg/agent/config.yaml
+              mountPath: /etc/xdg/xeol-agent/config.yaml
               subPath: config.yaml
           envFrom:
             {{- if not .Values.inject_secrets_via_env }}

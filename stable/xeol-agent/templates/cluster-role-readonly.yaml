@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: xeol-agent-read-only
 rules:
-- apiGroups: ["apps"]
+- apiGroups: ["apps", ""]
   resources: ["pods","namespaces", "deployments"]
   verbs: ["get", "watch", "list"]
