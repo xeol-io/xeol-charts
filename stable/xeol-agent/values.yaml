@@ -153,7 +153,7 @@ xeolAgent:
   ignoreNotRunning: true
 
   xeol:
-    apiKey:
+    apiKey: foobar
 
     # defaults to 'admin' when not specified
     account: admin
