@@ -29,3 +29,4 @@ jobs:
           charts_repo_url: https://charts.xeol.io
         env:
           CR_TOKEN: "${{ secrets.NOQCKS_GITHUB_TOKEN }}"
+
