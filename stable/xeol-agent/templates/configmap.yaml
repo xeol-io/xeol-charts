@@ -1,0 +1,40 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ include "xeol-agent.fullname" . }}
+  labels:
+    app: {{ include "xeol-agent.fullname" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+  config.yaml: |
+    kubeconfig:
+      path: {{ .Values.xeolAgent.kubeconfig.path }}
+      cluster: {{ .Values.xeolAgent.kubeconfig.cluster }}
+    output: {{ .Values.xeolAgent.output }}
+    quiet: {{ .Values.xeolAgent.quiet }}
+    log:
+      structured: {{ .Values.xeolAgent.log.structured }}
+      level: {{ .Values.xeolAgent.log.level }}
+      file: {{ .Values.xeolAgent.log.file }}
+    namespaces:
+      {{- toYaml .Values.xeolAgent.namespaces | nindent 6 }}
+    namespace-selectors:
+      {{- toYaml .Values.xeolAgent.namespaceSelectors | nindent 6 }}
+    mode: {{ .Values.xeolAgent.mode }}
+    polling-interval-seconds: {{ .Values.xeolAgent.pollingIntervalSeconds }}
+    kubernetes-request-timeout-seconds: {{ .Values.xeolAgent.kubernetesRequestTimeoutSeconds }}
+    kubernetes:
+      request-timeout-seconds: {{ .Values.xeolAgent.kubernetes.requestTimeoutSeconds }}
+      request-batch-size: {{ .Values.xeolAgent.kubernetes.requestBatchSize }}
+      worker-pool-size: {{ .Values.xeolAgent.kubernetes.workerPoolSize }}
+    ignore-not-running: {{ .Values.xeolAgent.ignoreNotRunning }}
+    missing-tag-policy:
+      {{- toYaml .Values.xeolAgent.missingTagPolicy | nindent 6 }}
+    anchore:
+      url: {{ .Values.xeolAgent.anchore.url }}
+      apiKey: $XEOL_AGENT_API_KEY
+      http:
+        insecure: {{ .Values.xeolAgent.anchore.http.insecure }}
+        timeout-seconds: {{ .Values.xeolAgent.anchore.http.timeoutSeconds }}
