@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   xeol-agent:
   - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2023-01-12T19:52:07.666946393Z"
+    description: A Helm chart for xeol-agent, which describes which resources are
+      in use in a given Kubernetes Cluster
+    digest: 12e8b6f004f0178d7f35b8abd347728f7c8f879e424ade86cc2edd39d5d581c8
+    home: https://xeol.io
+    keywords:
+    - analysis
+    - docker
+    - xeol
+    - EOL
+    - image
+    - inventory
+    - security
+    - scanner
+    maintainers:
+    - email: benji@xeol.io
+      name: noqcks
+    name: xeol-agent
+    urls:
+    - https://github.com/noqcks/xeol-charts/releases/download/xeol-agent-0.1.2/xeol-agent-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 0.1.1
     created: "2023-01-12T02:17:07.963515728Z"
     description: A Helm chart for xeol-agent, which describes which images are in
@@ -24,4 +47,4 @@ entries:
     urls:
     - https://github.com/noqcks/xeol-charts/releases/download/xeol-agent-0.1.1/xeol-agent-0.1.1.tgz
     version: 0.1.1
-generated: "2023-01-12T02:17:07.963522128Z"
+generated: "2023-01-12T19:52:07.666953193Z"
