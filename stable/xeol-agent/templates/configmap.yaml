@@ -23,7 +23,7 @@ data:
     namespace-selectors:
       {{- toYaml .Values.xeolAgent.namespaceSelectors | nindent 6 }}
     mode: {{ .Values.xeolAgent.mode }}
-    polling-interval-seconds: {{ .Values.xeolAgent.pollingIntervalSeconds }}
+    polling-interval-minutes: {{ .Values.xeolAgent.pollingIntervalMinutes }}
     kubernetes-request-timeout-seconds: {{ .Values.xeolAgent.kubernetesRequestTimeoutSeconds }}
     kubernetes:
       request-timeout-seconds: {{ .Values.xeolAgent.kubernetes.requestTimeoutSeconds }}
