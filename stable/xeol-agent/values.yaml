@@ -119,7 +119,7 @@ xeolAgent:
   mode: periodic
 
   # Only respected if mode is periodic
-  pollingIntervalSeconds: 60
+  pollingIntervalMinutes: 1440
 
   # Kubernetes API configuration parameters (should not need tuning)
   kubernetes:
