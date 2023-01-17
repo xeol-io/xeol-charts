@@ -33,8 +33,7 @@ data:
     missing-tag-policy:
       {{- toYaml .Values.xeolAgent.missingTagPolicy | nindent 6 }}
     xeol:
-      url: {{ .Values.xeolAgent.xeol.url }}
-      apiKey: $XEOL_AGENT_API_KEY
+      api-key: $XEOL_AGENT_API_KEY
       http:
         insecure: {{ .Values.xeolAgent.xeol.http.insecure }}
         timeout-seconds: {{ .Values.xeolAgent.xeol.http.timeoutSeconds }}
