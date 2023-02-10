@@ -1,7 +1,7 @@
 apiVersion: v2
 name: xeol-agent
-version: 0.1.4
-appVersion: 0.1.4
+version: 0.1.5
+appVersion: 0.1.5
 description: A Helm chart for xeol-agent, which describes which resources are in use in a given Kubernetes Cluster
 keywords:
   - analysis
