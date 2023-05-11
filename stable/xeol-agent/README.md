@@ -40,7 +40,7 @@ helm repo add xeol https://charts.xeol.io
 helm install <release-name> -f <values.yaml> xeol/xeol-agent
 ```
 
-A basic values file can always be found [here](https://github.com/noqcks/xeol-charts/tree/master/stable/xeol-agent/values.yaml)
+A basic values file can always be found [here](https://github.com/xeol-io/xeol-charts/tree/master/stable/xeol-agent/values.yaml)
 
 The key configurations are in the xeolAgent.xeol section. xeol-agent must be able to resolve the xeol.io URL and requires API credentials.
 
@@ -48,4 +48,4 @@ Note: the Xeol APIKey can be provided via a kubernetes secret, or injected into 
 * For injecting the environment variable, see: inject_secrets_via_env
 * For providing your own secret for the Xeol APIKey, see: xeolAgent.existing_secret. xeol-agent creates it's own secret based on your values.yaml file for key xeolAgent.xeol.apiKey, but the xeolAgent.existingSecret key allows you to create your own secret and provide it in the values file.
 
-See the [xeol-agent repo](https://github.com/noqcks/xeol-agent) for more information about the xeol-agent specific configuration
+See the [xeol-agent repo](https://github.com/xeol-io/xeol-agent) for more information about the xeol-agent specific configuration
